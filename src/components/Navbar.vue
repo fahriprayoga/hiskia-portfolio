@@ -24,7 +24,7 @@
         </a>
         <button @click="scrollTo('contact')"
           class="px-5 py-2.5 bg-indigo-600 text-white rounded-xl text-sm font-bold shadow-lg shadow-indigo-100 hover:bg-indigo-700 transition-all hover:scale-105 active:scale-95">
-          Hire Me
+          Hubungi Saya
         </button>
       </div>
 
@@ -48,7 +48,7 @@
         </a>
         <button @click="scrollTo('contact')"
           class="w-full mt-2 py-4 bg-indigo-600 text-white rounded-2xl text-lg font-bold shadow-xl shadow-indigo-100 active:scale-95 transition-all">
-          Hire Me
+          Hubungi Saya
         </button>
       </div>
     </transition>
@@ -60,11 +60,11 @@ import { ref, onMounted, onUnmounted } from "vue";
 import { Sparkles, Menu, X } from "lucide-vue-next";
 
 const navLinks = [
-  { label: "Home", href: "#hero" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" },
+  { label: "Beranda", href: "#hero" },
+  { label: "Tentang", href: "#about" },
+  { label: "Keahlian", href: "#skills" },
+  { label: "Pendidikan", href: "#education" },
+  { label: "Kontak", href: "#contact" },
 ];
 
 const isScrolled = ref(false);

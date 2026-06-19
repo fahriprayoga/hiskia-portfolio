@@ -12,7 +12,7 @@
           </span>
         </div>
         <p class="text-slate-500 leading-relaxed max-w-xs">
-          Building meaningful digital experiences through modern aesthetics and purposeful code.
+          Membangun pengalaman digital yang bermakna melalui estetika modern dan kode yang terarah.
         </p>
         <div class="flex gap-4">
           <a v-for="social in socialLinks" :key="social.label" :href="social.url" target="_blank"
@@ -24,7 +24,7 @@
 
       <!-- Quick Links -->
       <div class="space-y-6">
-        <h4 class="text-lg font-bold text-slate-800">Navigation</h4>
+        <h4 class="text-lg font-bold text-slate-800">Navigasi</h4>
         <ul class="space-y-3">
           <li v-for="link in navLinks" :key="link.label">
             <a :href="link.href"
@@ -38,12 +38,12 @@
 
       <!-- Newsletter -->
       <div class="space-y-6">
-        <h4 class="text-lg font-bold text-slate-800">Stay Updated</h4>
+        <h4 class="text-lg font-bold text-slate-800">Tetap Terhubung</h4>
         <p class="text-slate-500 text-sm">
-          Join my newsletter to get the latest updates on my projects and writings.
+          Ikuti newsletter saya untuk mendapatkan update terbaru tentang proyek dan tulisan saya.
         </p>
         <form @submit.prevent="handleSubscribe" class="flex flex-col sm:flex-row gap-3">
-          <input v-model="emailSubs" type="email" placeholder="name@email.com" required
+          <input v-model="emailSubs" type="email" placeholder="nama@email.com" required
             class="flex-1 px-5 py-3 rounded-xl border border-slate-200 bg-white/50 focus:ring-4 focus:ring-indigo-100 focus:border-indigo-400 outline-none transition-all text-sm" />
           <button type="submit"
             class="px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-100 flex items-center justify-center gap-2">
@@ -52,7 +52,7 @@
         </form>
         <transition name="fade">
           <p v-if="subscribed" class="text-sm font-bold text-green-600">
-            ✓ Successfully subscribed!
+            ✓ Berhasil berlangganan!
           </p>
         </transition>
       </div>
@@ -63,13 +63,13 @@
       class="mt-16 pt-8 border-t border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-400">
       <p>
         &copy; {{ currentYear }}
-        <span class="text-slate-700 font-bold">Andre Pratama</span>. Crafted with
+        <span class="text-slate-700 font-bold">Hiskia Rahadi</span>. Dibuat dengan
         <Heart class="w-4 h-4 inline text-rose-500 fill-rose-500/20" />
-        excellence.
+        kualitas tinggi.
       </p>
       <div class="flex items-center gap-6">
-        <a href="#" class="hover:text-indigo-600 transition-colors">Privacy Policy</a>
-        <a href="#" class="hover:text-indigo-600 transition-colors">Terms of Service</a>
+        <a href="#" class="hover:text-indigo-600 transition-colors">Kebijakan Privasi</a>
+        <a href="#" class="hover:text-indigo-600 transition-colors">Syarat Ketentuan</a>
       </div>
     </div>
   </footer>
@@ -98,11 +98,11 @@ const socialLinks = ref([
 ]);
 
 const navLinks = ref([
-  { label: "Home", href: "#hero" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" },
+  { label: "Beranda", href: "#hero" },
+  { label: "Tentang", href: "#about" },
+  { label: "Keahlian", href: "#skills" },
+  { label: "Pendidikan", href: "#education" },
+  { label: "Kontak", href: "#contact" },
 ]);
 
 const emailSubs = ref("");

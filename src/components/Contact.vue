@@ -6,10 +6,11 @@
       <div class="space-y-8">
         <div class="space-y-4">
           <h2 class="text-4xl font-bold text-slate-800">
-            Let's <span class="premium-gradient-text">Connect</span>
+            Mari <span class="premium-gradient-text">Terhubung</span>
           </h2>
           <p class="text-slate-500 max-w-md">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            Sata selalu terbuka untuk mendiskusikan proyek baru, ide kreatif, atau kesempatan untuk menjadi bagian dari
+            visi Anda.
           </p>
         </div>
 
@@ -33,28 +34,28 @@
 
       <!-- Contact Form -->
       <div class="bg-white/50 backdrop-blur-sm rounded-[2.5rem] p-8 md:p-10 border border-white/60 shadow-inner">
-        <h3 class="text-2xl font-bold text-slate-800 mb-6">Send a Message</h3>
+        <h3 class="text-2xl font-bold text-slate-800 mb-6">Kirim Pesan</h3>
         <form @submit.prevent="handleSubmit" class="space-y-4">
           <div class="group">
-            <input v-model="form.name" type="text" placeholder="Your Name"
+            <input v-model="form.name" type="text" placeholder="Nama Anda"
               class="w-full px-6 py-4 rounded-2xl border border-slate-200 bg-white/80 focus:ring-4 focus:ring-indigo-100 focus:border-indigo-400 outline-none transition-all" />
           </div>
           <div class="group">
-            <input v-model="form.email" type="email" placeholder="Your Email"
+            <input v-model="form.email" type="email" placeholder="Email Anda"
               class="w-full px-6 py-4 rounded-2xl border border-slate-200 bg-white/80 focus:ring-4 focus:ring-indigo-100 focus:border-indigo-400 outline-none transition-all" />
           </div>
           <div class="group">
-            <textarea v-model="form.message" rows="4" placeholder="How can I help you?"
+            <textarea v-model="form.message" rows="4" placeholder="Bagaimana saya bisa membantu Anda?"
               class="w-full px-6 py-4 rounded-2xl border border-slate-200 bg-white/80 focus:ring-4 focus:ring-indigo-100 focus:border-indigo-400 outline-none transition-all resize-none"></textarea>
           </div>
           <button type="submit" class="w-full btn-premium btn-primary py-4 text-lg font-bold shadow-indigo-200">
-            Send Message
+            Kirim Pesan
           </button>
         </form>
         <transition name="fade">
           <p v-if="submitted"
             class="mt-6 p-4 rounded-2xl bg-green-50 text-green-700 text-center font-bold border border-green-100">
-            ✓ Message sent successfully!
+            ✓ Pesan berhasil dikirim!
           </p>
         </transition>
       </div>
@@ -68,10 +69,11 @@ import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-vue-next";
 
 const contactInfo = ref([
   { label: "Email", value: "hiskia@email.com", icon: Mail },
-  { label: "Location", value: "Medan, Indonesia", icon: MapPin },
+  { label: "Lokasi", value: "Medan, Indonesia", icon: MapPin },
   { label: "LinkedIn", value: "linkedin.com/in/hiskia", icon: Linkedin },
   { label: "GitHub", value: "github.com/hiskia", icon: Github },
 ]);
+
 
 const form = reactive({
   name: "",

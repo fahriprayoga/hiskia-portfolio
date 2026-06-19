@@ -4,7 +4,7 @@
       <div class="p-3 bg-indigo-600 rounded-2xl shadow-lg shadow-indigo-200">
         <GraduationCap class="text-white w-6 h-6" />
       </div>
-      <h2 class="text-3xl font-bold text-slate-800 tracking-tight">Education Background</h2>
+      <h2 class="text-3xl font-bold text-slate-800 tracking-tight">Riwayat Pendidikan</h2>
     </div>
 
     <div class="relative pl-10 md:pl-12 border-l-2 border-slate-200 space-y-12">
@@ -49,15 +49,15 @@ const education = ref([
     degree: "S1 Informatika",
     institution: "Universitas Satya Terra Bhinneka",
     period: "2025 - sekarang",
-    description: "Specialized in Software Engineering and Human-Computer Interaction. Graduated with honors.",
+    description: "Berfokus pada rekayasa perangkat lunak dan arsitektur komputer modern.",
     achievements: ["IPK 3.8 / 4.0", "Web Dev Society Lead", "UX Research Fellow"],
   },
   {
     degree: "SMK Jurusan Teknik Komputer dan Jaringan",
     institution: "SMK Negeri 1 Cibinong",
     period: "2022 - 2025",
-    description: "Immersive training program focused on modern web architectures using Vue.js and Node.js ecosystems.",
-    achievements: ["Vue.js Specialist", "Backend Architecture", "Firebase Expert"],
+    description: "Mempelajari dasar-dasar jaringan komputer, sistem operasi, dan pengembangan web dasar.",
+    achievements: ["Spesialis Vue.js", "Arsitektur Backend", "Firebase Expert"],
   },
 ]);
 </script>

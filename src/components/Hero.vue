@@ -16,11 +16,11 @@
 
     <div class="space-y-6 max-w-3xl">
       <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
-        Hi, I'm <span class="premium-gradient-text">Hiskia Rahadi</span>
+        Halo, saya <span class="premium-gradient-text">Hiskia Rahadi</span>
       </h1>
       <p class="text-xl md:text-2xl text-slate-600 font-medium max-w-2xl mx-auto">
-        Crafting <span class="text-indigo-600">immersive</span> digital experiences with modern front-end technologies
-        and human-centric design.
+        Menciptakan <span class="text-indigo-600">pengalaman digital</span> yang mendalam dengan teknologi front-end
+        modern dan desain yang berpusat pada manusia.
       </p>
 
       <div class="flex flex-wrap gap-3 justify-center pt-8">
