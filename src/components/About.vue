@@ -55,7 +55,7 @@
 <script setup>
 import { ref } from "vue";
 import { User, Image as ImageIcon } from "lucide-vue-next";
+import profileImage from "./../assets/image.png";
 
-const profileImage = ref("/src/assets/image.png");
 const profileName = ref("Hiskia Rahadi");
 </script>
