@@ -38,8 +38,8 @@
 
 <script setup>
 import { ref } from "vue";
+import profileImage from "./../assets/image.png";
 
-const profileImage = ref("/src/assets/image.png"); // atau "/images/profile.jpg"
 const profileName = ref("Hiskia Rahadi");
 
 const tags = ref(["Jaringan Komputer", "Hardware", "Vue.js", "Pengembangan Diri"]);
