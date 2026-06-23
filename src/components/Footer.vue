@@ -8,18 +8,12 @@
             <Sparkles class="text-white w-5 h-5" />
           </div>
           <span class="text-2xl font-bold text-slate-800 tracking-tight">
-            Andre<span class="text-indigo-600">Pratama</span>
+            Hiskia<span class="text-indigo-600">Rahadi</span>
           </span>
         </div>
         <p class="text-slate-500 leading-relaxed max-w-xs">
-          Membangun pengalaman digital yang bermakna melalui estetika modern dan kode yang terarah.
+          Mendalami dan memahami pengalaman digital melalui estetika modern dan kode yang terarah.
         </p>
-        <div class="flex gap-4">
-          <a v-for="social in socialLinks" :key="social.label" :href="social.url" target="_blank"
-            class="w-10 h-10 bg-white border border-slate-100 rounded-xl flex items-center justify-center hover:bg-slate-50 hover:border-indigo-200 transition-all hover:-translate-y-1 group">
-            <component :is="social.icon" class="w-5 h-5 text-slate-400 group-hover:text-indigo-600 transition-colors" />
-          </a>
-        </div>
       </div>
 
       <!-- Quick Links -->
@@ -36,25 +30,15 @@
         </ul>
       </div>
 
-      <!-- Newsletter -->
+      <!-- Social & Contact -->
       <div class="space-y-6">
-        <h4 class="text-lg font-bold text-slate-800">Tetap Terhubung</h4>
-        <p class="text-slate-500 text-sm">
-          Ikuti newsletter saya untuk mendapatkan update terbaru tentang proyek dan tulisan saya.
-        </p>
-        <form @submit.prevent="handleSubscribe" class="flex flex-col sm:flex-row gap-3">
-          <input v-model="emailSubs" type="email" placeholder="nama@email.com" required
-            class="flex-1 px-5 py-3 rounded-xl border border-slate-200 bg-white/50 focus:ring-4 focus:ring-indigo-100 focus:border-indigo-400 outline-none transition-all text-sm" />
-          <button type="submit"
-            class="px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-100 flex items-center justify-center gap-2">
-            <Send class="w-4 h-4" />
-          </button>
-        </form>
-        <transition name="fade">
-          <p v-if="subscribed" class="text-sm font-bold text-green-600">
-            ✓ Berhasil berlangganan!
-          </p>
-        </transition>
+        <h4 class="text-lg font-bold text-slate-800">Hubungi Saya</h4>
+        <div class="space-y-3">
+          <div v-for="contact in contacts" :key="contact.label" class="flex items-center gap-3 text-slate-500">
+            <component :is="contact.icon" class="w-5 h-5 text-indigo-600" />
+            <span>{{ contact.value }}</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -65,7 +49,7 @@
         &copy; {{ currentYear }}
         <span class="text-slate-700 font-bold">Hiskia Rahadi</span>. Dibuat dengan
         <Heart class="w-4 h-4 inline text-rose-500 fill-rose-500/20" />
-        kualitas tinggi.
+        dedikasi tinggi.
       </p>
       <div class="flex items-center gap-6">
         <a href="#" class="hover:text-indigo-600 transition-colors">Kebijakan Privasi</a>
@@ -83,9 +67,9 @@ import {
   Instagram,
   Twitter,
   Sparkles,
-  Send,
   Heart,
-  Globe,
+  Mail,
+  Phone,
 } from "lucide-vue-next";
 
 const currentYear = computed(() => new Date().getFullYear());
@@ -93,40 +77,21 @@ const currentYear = computed(() => new Date().getFullYear());
 const socialLinks = ref([
   { label: "GitHub", icon: Github, url: "#" },
   { label: "LinkedIn", icon: Linkedin, url: "#" },
-  { label: "Instagram", icon: Instagram, url: "#" },
+  { label: "Instagram", icon: Instagram, url: "https://instagram.com/adi_hiskia" },
   { label: "Twitter", icon: Twitter, url: "#" },
+]);
+
+const contacts = ref([
+  { label: "Instagram", icon: Instagram, value: "@adi_hiskia" },
+  { label: "WhatsApp", icon: Phone, value: "0831 3238 0999" },
+  { label: "Gmail", icon: Mail, value: "hiskialg@gmail.com" },
 ]);
 
 const navLinks = ref([
   { label: "Beranda", href: "#hero" },
   { label: "Tentang", href: "#about" },
-  { label: "Keahlian", href: "#skills" },
+  { label: "Keterampilan", href: "#skills" },
   { label: "Pendidikan", href: "#education" },
   { label: "Kontak", href: "#contact" },
 ]);
-
-const emailSubs = ref("");
-const subscribed = ref(false);
-
-const handleSubscribe = () => {
-  if (emailSubs.value) {
-    subscribed.value = true;
-    setTimeout(() => {
-      subscribed.value = false;
-      emailSubs.value = "";
-    }, 4000);
-  }
-};
 </script>
-
-<style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>

@@ -62,7 +62,7 @@ import { Sparkles, Menu, X } from "lucide-vue-next";
 const navLinks = [
   { label: "Beranda", href: "#hero" },
   { label: "Tentang", href: "#about" },
-  { label: "Keahlian", href: "#skills" },
+  { label: "Keterampilan", href: "#skills" },
   { label: "Pendidikan", href: "#education" },
   { label: "Kontak", href: "#contact" },
 ];

@@ -3,8 +3,9 @@
     <div class="relative animate-float">
       <div
         class="w-40 h-40 md:w-52 md:h-52 rounded-[3rem] bg-linear-to-tr from-indigo-500 to-purple-600 p-1.5 shadow-2xl shadow-indigo-200">
-        <div class="w-full h-full rounded-[2.6rem] bg-white overflow-hidden flex items-center justify-center text-6xl">
-          <span class="drop-shadow-xl">👤</span>
+        <div class="w-full h-full rounded-[2.6rem] bg-white overflow-hidden flex items-center justify-center">
+          <!-- Ganti src dengan path gambar Anda -->
+          <img :src="profileImage" :alt="profileName" class="w-full h-full object-cover" />
         </div>
       </div>
       <div
@@ -19,8 +20,10 @@
         Halo, saya <span class="premium-gradient-text">Hiskia Rahadi</span>
       </h1>
       <p class="text-xl md:text-2xl text-slate-600 font-medium max-w-2xl mx-auto">
-        Menciptakan <span class="text-indigo-600">pengalaman digital</span> yang mendalam dengan teknologi front-end
-        modern dan desain yang berpusat pada manusia.
+        <span class="text-indigo-600">Memahami</span> dan <span class="text-indigo-600">mendalami</span>
+        dunia <span class="font-bold text-slate-800">jaringan</span> dan
+        <span class="font-bold text-slate-800">hardware komputer</span>,
+        serta terus mengembangkan diri di bidang <span class="text-indigo-600">pengembangan web</span>.
       </p>
 
       <div class="flex flex-wrap gap-3 justify-center pt-8">
@@ -35,7 +38,9 @@
 
 <script setup>
 import { ref } from "vue";
-import { ArrowRight } from "lucide-vue-next";
 
-const tags = ref(["Vue.js Developer", "UI/UX Design", "Performance First", "Clean Architect"]);
+const profileImage = ref("/src/assets/image.png"); // atau "/images/profile.jpg"
+const profileName = ref("Hiskia Rahadi");
+
+const tags = ref(["Jaringan Komputer", "Hardware", "Vue.js", "Pengembangan Diri"]);
 </script>

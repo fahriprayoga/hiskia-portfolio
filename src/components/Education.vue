@@ -22,10 +22,6 @@
               </h3>
               <p class="text-indigo-600 font-semibold mt-1">{{ edu.institution }}</p>
             </div>
-            <span
-              class="text-sm font-bold text-slate-500 bg-slate-100 px-4 py-1.5 rounded-full self-start md:self-auto">
-              {{ edu.period }}
-            </span>
           </div>
           <p class="text-slate-500 leading-relaxed">{{ edu.description }}</p>
           <div class="mt-6 flex flex-wrap gap-2">
@@ -46,18 +42,22 @@ import { GraduationCap } from "lucide-vue-next";
 
 const education = ref([
   {
-    degree: "S1 Informatika",
-    institution: "Universitas Satya Terra Bhinneka",
-    period: "2025 - sekarang",
-    description: "Berfokus pada rekayasa perangkat lunak dan arsitektur komputer modern.",
-    achievements: ["IPK 3.8 / 4.0", "Web Dev Society Lead", "UX Research Fellow"],
+    degree: "SDN 173455 Siborboron",
+    institution: "Sijamapolang",
+    description: "Pendidikan dasar yang menjadi fondasi awal perjalanan belajar.",
+    achievements: ["Dasar-dasar Pendidikan"],
   },
   {
-    degree: "SMK Jurusan Teknik Komputer dan Jaringan",
-    institution: "SMK Negeri 1 Cibinong",
-    period: "2022 - 2025",
-    description: "Mempelajari dasar-dasar jaringan komputer, sistem operasi, dan pengembangan web dasar.",
-    achievements: ["Spesialis Vue.js", "Arsitektur Backend", "Firebase Expert"],
+    degree: "SMPs Maju Besitang",
+    institution: "Langkat",
+    description: "Mempelajari dasar-dasar ilmu pengetahuan dan teknologi.",
+    achievements: ["Pengenalan Teknologi"],
+  },
+  {
+    degree: "SMKs Maju Besitang - Jurusan TKJ",
+    institution: "Langkat",
+    description: "Mendalami Teknik Komputer dan Jaringan sebagai bekal karir di bidang IT.",
+    achievements: ["Teknik Komputer", "Jaringan", "Dasar Pemrograman"],
   },
 ]);
 </script>

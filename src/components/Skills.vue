@@ -2,10 +2,10 @@
   <section class="space-y-12">
     <div class="text-center space-y-4">
       <h2 class="text-4xl font-bold text-slate-800">
-        Keahlian & <span class="premium-gradient-text">Keahlian Khusus</span>
+        Keterampilan & <span class="premium-gradient-text">Minat yang Ingin Dikembangkan</span>
       </h2>
       <p class="text-slate-500 max-w-xl mx-auto">
-        Berbagai keterampilan teknis dan filosofi desain yang saya bawa ke setiap proyek.
+        Beberapa bidang yang sedang saya pelajari dan dalami, serta area pengembangan diri ke depan.
       </p>
     </div>
 
@@ -39,48 +39,48 @@ import { ref } from "vue";
 import {
   Code2,
   Layout,
-  Database,
-  Smartphone,
-  Palette,
+  Server,
+  Wifi,
+  Cpu,
   Zap,
 } from "lucide-vue-next";
 
 const skills = ref([
   {
-    name: "Pengembangan Frontend",
-    description: "Membangun antarmuka pengguna yang interaktif dan dinamis.",
+    name: "Jaringan Komputer",
+    description: "Memahami dasar-dasar jaringan, topologi, dan konfigurasi perangkat jaringan.",
+    icon: Wifi,
+    tags: ["TCP/IP", "Routing", "Switching", "LAN/WAN"],
+  },
+  {
+    name: "Hardware Komputer",
+    description: "Mendalami komponen perangkat keras, instalasi, dan troubleshooting.",
+    icon: Cpu,
+    tags: ["CPU", "RAM", "Motherboard", "Periferal"],
+  },
+  {
+    name: "Pengembangan Web (Belajar)",
+    description: "Sedang dalam proses belajar pengembangan web front-end modern.",
     icon: Code2,
-    tags: ["Vue 3", "React", "TypeScript"],
+    tags: ["Vue 3", "HTML/CSS", "JavaScript", "Tailwind"],
   },
   {
-    name: "Desain UI/UX",
-    description: "Merancang antarmuka yang intuitif dan estetis.",
+    name: "UI/UX Design (Belajar)",
+    description: "Mempelajari prinsip desain antarmuka untuk pengalaman pengguna yang baik.",
     icon: Layout,
-    tags: ["Figma", "Sistem Desain", "Prototyping"],
+    tags: ["Figma", "Prototyping", "Sistem Desain"],
   },
   {
-    name: "Integrasi API",
-    description: "Menghubungkan front-end dengan back-end yang kuat secara mulus.",
-    icon: Database,
-    tags: ["RESTful", "GraphQL", "Axios"],
+    name: "Infrastruktur IT",
+    description: "Memahami dasar-dasar infrastruktur teknologi informasi dan server.",
+    icon: Server,
+    tags: ["Server", "Cloud Computing", "Virtualisasi"],
   },
   {
-    name: "Desain Responsif",
-    description: "Memastikan kinerja optimal di semua perangkat.",
-    icon: Smartphone,
-    tags: ["Mobile-first", "Tailwind CSS", "Flexbox"],
-  },
-  {
-    name: "Creative Engineering",
-    description: "Eksplorasi visual dan animasi interaktif.",
-    icon: Palette,
-    tags: ["GSAP", "Animasi SVG", "Three.js"],
-  },
-  {
-    name: "Optimasi Performa",
-    description: "Mengoptimalkan aplikasi untuk kecepatan maksimal.",
+    name: "Optimasi Sistem",
+    description: "Mempelajari cara mengoptimalkan kinerja sistem dan perangkat.",
     icon: Zap,
-    tags: ["CWV", "Lazy Loading", "Optimasi Aset"],
+    tags: ["Performance", "Monitoring", "Troubleshooting"],
   },
 ]);
 </script>

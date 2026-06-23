@@ -8,18 +8,20 @@
           <span>Tentang Saya</span>
         </div>
         <h2 class="text-4xl font-bold text-slate-800 leading-tight">
-          Berdedikasi untuk menciptakan <br />
-          <span class="premium-gradient-text">Pengalaman Pengguna yang Luar Biasa</span>
+          Berdedikasi untuk <span class="premium-gradient-text">Memahami dan Mendalami</span><br />
+          Dunia Teknologi
         </h2>
         <p class="text-lg text-slate-600 leading-relaxed">
-          Saya adalah seorang Pengembang Front-end yang berdedikasi dengan ketajaman terhadap detail dan gairah untuk
-          membangun aplikasi web yang bersih, efisien, dan berpusat pada pengguna. Perjalanan saya di dunia teknologi
-          didorong oleh rasa ingin tahu untuk menyelesaikan masalah kompleks melalui kode yang elegan dan desain yang
-          intuitif.
+          Saya memiliki ketertarikan yang mendalam pada dunia <span class="font-semibold text-slate-800">jaringan
+            komputer</span>
+          dan <span class="font-semibold text-slate-800">hardware</span>. Saya senang mempelajari bagaimana sistem
+          bekerja, mulai dari perangkat keras hingga konektivitas jaringan yang menghubungkan semuanya.
         </p>
         <p class="text-lg text-slate-600 leading-relaxed">
-          Dengan fondasi kuat dalam teknologi web modern, saya berspesialisasi dalam merancang antarmuka responsif yang
-          tidak hanya terlihat indah tetapi juga berkinerja sempurna di semua perangkat.
+          Saat ini, saya juga sedang dalam tahap <span class="font-semibold text-indigo-600">mengembangkan diri</span>
+          di bidang <span class="font-semibold text-slate-800">pengembangan web</span>. Meskipun masih dalam proses
+          belajar, saya terus berusaha untuk memahami teknologi front-end modern dan menerapkannya dalam proyek-proyek
+          kecil sebagai bentuk latihan dan pengembangan kemampuan.
         </p>
         <div class="flex flex-wrap gap-4 pt-4">
           <div class="flex items-center gap-2 text-slate-700 font-medium">
@@ -28,15 +30,17 @@
           </div>
           <div class="flex items-center gap-2 text-slate-700 font-medium">
             <div class="w-2 h-2 rounded-full bg-indigo-500"></div>
-            Spesialis Kerja Jarak Jauh (Remote)
+            Terus Belajar & Berkembang
           </div>
         </div>
       </div>
       <div class="relative">
         <div
           class="aspect-square rounded-[3rem] bg-linear-to-tr from-indigo-100 to-purple-50 overflow-hidden border border-white/50 relative z-10">
-          <!-- Image placeholder for user to replace -->
-          <div class="w-full h-full flex items-center justify-center text-indigo-300">
+          <!-- Profile Image -->
+          <img v-if="profileImage" :src="profileImage" :alt="profileName" class="w-full h-full object-cover" />
+          <!-- Placeholder if no image -->
+          <div v-else class="w-full h-full flex items-center justify-center text-indigo-300">
             <ImageIcon class="w-24 h-24 stroke-[1px]" />
           </div>
         </div>
@@ -49,5 +53,9 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
 import { User, Image as ImageIcon } from "lucide-vue-next";
+
+const profileImage = ref("/src/assets/image.png");
+const profileName = ref("Hiskia Rahadi");
 </script>
